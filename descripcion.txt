@@ -1,0 +1,112 @@
+DESCRIPCION DEL PROYECTO
+
+
+El sistema permitira a los usuarios gestionar sus tareas o objetivos que tienen
+que realizar o tambien es se puede utilizar como un recordatorio de las cosas
+que tienen pendiente.
+
+objetivos principales:
+
+1. crear tareas con un titulo y descripcion.
+2. Marcar tareas como completadas.
+3. Editar el contenido de las tareas.
+4. Eliminar tareas.
+5. Visualizar todas las tareas en una lista.
+
+Estructura del proyecto:
+FRONTEND:
+
+HTML: Estructura de la pagina.
+CSS : Estilos y el diseño.
+JavaScript : Validacion de formulario.
+
+BACKEND:
+
+PHP : Manejo de las solicitudes para agregar,leer,actualizar y eliminar.
+
+BASE DE DATOS : Usare phpAdmin para crear la base de datos llamada "GestionTareas"
+la tablas que estare utilizando son tres.
+
+1.Usuarios.
+2.Tareas.
+3.Cat
+egorias.
+
+              SEMANA 1 
+              OBJETIVO PARA ESTA SEMANA:
+              - Terminar de hacer la estructura del proyecto.
+
+
+Dia 1: martes 28 de enero del 2025
+
+hoy me puse realizar la descripcion y organizar la estructura del proyecto. como la organización de carpetas.
+creación de la estructura de base de datos y cuales son los objetivos principales del proyecto.
+
+OBJETIVO DE MAÑANA: hacer la estructura y el diseño de la aplicacion.
+
+Dia 2: miercoles 29 de enero 2025
+
+el dia de hoy comenzamos a crear los archivos html,css,javascript y php la cual vamos a estar manejando la aplicación web
+que estaremos realizando.
+
+luego codifique la estructura html del proyecto y el estilo css la cual debo mejorar mañana para realizar un diseño mucho mas
+profesional para el gestor de tarea que estoy realizando.
+
+OBJETIVO PARA MAÑANA: - Terminar de mejorar el estilo de la aplicacion y comenzar a relizar las funciones.
+                      - crear la base de datos en el localhost.
+
+Dia 3: sabado 1 de febrero 2025
+
+el dia de hoy culminamos los objetivos que dejamos presente la vez pasada la base de datos
+exitosamente fue creada.y el diseño de la aplicacion web quedo terminado.
+
+los objetivos que ahora hay que cumplir son:
+     - hacer que el usuario pueda registrarse en la aplicacion.
+     
+
+                SEMANA 2
+                OBJETIVO PARA ESTA SEMANA:
+                - Terminar de hacer todas las funciones de la aplicacion.
+                - si es posible hacer que los usuarios ya se registren.
+
+Dia 4: Lunes 3 de febreo 2025
+
+el dia de hoy estuve implementando cosas importantes al proyecto como las
+funciones que se van a estar utilizando en proyecto como agregar,eliminar, o marcar como 
+completado. el objetivo de la vez pasada era de que las personas se pudieran registrar 
+pero pensandolo bien es mejor hacer que la aplicacion fruncione principalmente y ya
+cuando este lista ahora asi aplicar lo del registro.
+
+los objetivos para mañana son:
+           - agregar ya las funcionalidades con php.
+           - hacer la conexion a la base de datos.
+
+
+
+martes 4 de febrero del 2025
+
+El dia de hoy casi no me quedo tiempo para trabajar en el proyecto por lo que me toco haceer 
+algunas cosas aca en la casa. lo unico que realizamos fue la conexion a la base de datos 
+que resulto exitosa. despues de terminar esto se va a incluir en todos los archivos necesarios.
+
+los objetivos para mañana son: 
+               - comenzara a agregar la funcionalidades al proyecto con php.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

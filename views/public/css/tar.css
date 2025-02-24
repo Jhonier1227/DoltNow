@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* Estilos generales */
+.navbar {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add, .btn-logout {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.btn-add {
+    background: #007bff;
+    color: white;
+}
+.btn-add:hover {
+    background: #0056b3;
+}
+
+.btn-logout {
+    background: #dc3545;
+    color: white;
+}
+.btn-logout:hover {
+    background: #a71d2a;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+.dark-mode .task-card {
+    background: #222;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

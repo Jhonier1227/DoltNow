@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoltNow - Mis Tareas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="light-mode">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar px-3">
+        <a class="navbar-brand" href="#">DoltNow</a>
+        <button id="modo-btn" class="btn">🌙</button>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container mt-5 fade-in">
+        <h2 class="text-center">📌 Mis tareas</h2>
+
+        <!-- Formulario de tareas -->
+        <div class="task-card p-4 shadow-sm fade-in">
+            <form id="formTarea">
+                <input type="text" id="titulo" class="form-control mb-2" placeholder="Nueva tarea" required>
+                <textarea id="descripcion" class="form-control mb-3" placeholder="Descripción" required></textarea>
+                <button type="submit" class="btn btn-add">Agregar tarea</button>
+            </form>
+        </div>
+
+        <br>
+
+        <!-- Lista de tareas -->
+        <h3 class="mt-4">📋 Lista de tareas</h3>
+        <ul id="listaTareas" class="task-list">
+            <!-- Aquí se agregarán dinámicamente las tareas -->
+        </ul>
+
+        <br>
+        <a href="/controllers/logout.php" class="btn btn-logout">Cerrar sesión</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#modo-btn').click(function() {
+                $('body').toggleClass('dark-mode');
+                localStorage.setItem("modo", $('body').hasClass('dark-mode') ? "oscuro" : "claro");
+                $('#modo-btn').text($('body').hasClass('dark-mode') ? "☀️" : "🌙");
+            });
+            if (localStorage.getItem("modo") === "oscuro") {
+                $('body').addClass('dark-mode');
+                $('#modo-btn').text("☀️");
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        /* Estilos generales */
+        .navbar {
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .task-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-add, .btn-logout {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .btn-add {
+            background: #007bff;
+            color: white;
+        }
+        .btn-add:hover {
+            background: #0056b3;
+        }
+
+        .btn-logout {
+            background: #dc3545;
+            color: white;
+        }
+        .btn-logout:hover {
+            background: #a71d2a;
+        }
+
+        /* Modo oscuro */
+        .dark-mode {
+            background-color: #181818;
+            color: white;
+        }
+
+        .dark-mode .task-card {
+            background: #222;
+        }
+
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>
