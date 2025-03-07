@@ -6,6 +6,64 @@ img{
 #logo{
     width: 70px;
     height: 50px;
+}
 
-
+:root {
+    --azul-doltnow: #0a4fce;
+    --naranja-doltnow: #d8680c;
+    --verde-doltnow: #4CAF50;
+    --fondo-claro: #ffffff;
+    --texto-claro: #000000;
+    --fondo-oscuro: #121212;
+    --texto-oscuro: #ffffff;
+}
+body {
+    background-color: var(--fondo-claro);
+    color: var(--texto-claro);
+    transition: background 0.3s, color 0.3s;
+}
+.dark-mode {
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-oscuro);
+}
+.navbar {
+    background-color: var(--azul-doltnow);
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 40px 0;
+}
+.carousel {
+    width: 60%;
+}
+.carousel::before, .carousel::after {
+    content: "";
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, var(--naranja-doltnow), transparent);
+    top: 0;
+    z-index: -1;
+}
+.carousel::after {
+    right: 0;
+    background: linear-gradient(-45deg, var(--verde-doltnow), transparent);
+}
+.contact-buttons a {
+    margin: 5px;
+}
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
 }

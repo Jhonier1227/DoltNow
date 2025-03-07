@@ -95,6 +95,23 @@ los objetivos para mañana son:
 
 
 
+lunes 3 marzo del 2025
+
+el dia de hoy regrese al escribir el informe al proyecto.  le he hecho varios
+cambios de diseño. la idea es hacer un boceto del diseño antes de seguir diseñando
+para que asi no se complique la elaboracion del proyecto. pero ya logramos lo que es
+el logueo para que el usuario se registre y pueda iniciar sesion. aqui paramos la
+la codificación y me voy centrar en el diseño y los requerimientos.
+
+- hacer el documento IEEE-830.
+- Realizar los requerimientos:
+  - funcionales.
+  - no funcionales.
+  - presentación.
+  - tecnico.
+  - performerce.
+
+
 
 
 

@@ -1,18 +1,28 @@
 body{
     font-family:'Poppins',sans-serif;
     background: linear-gradient(to left,#0a4fce,#d8680c);
+    align-items:center;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+}
+
+#error-message{
+    color: #ddd;
+    font-size: 10px;
 }
 
 .container{
     background-color:rgba(255,255,255,0.1);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px rgba(0,0,0,0.2);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    width: 100%;
-    max-width: 350px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
-    margin-left: 470px;
-    margin-top: 10px;
+    margin-left: 300px;
+    
+    
 }
 
 h1{
@@ -25,10 +35,16 @@ h1{
 p{
     text-align: center;
     color: white;
+    margin-bottom: 20px;
 }
 h2{
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+h2:hover{
+    cursor: pointer;
 }
 
 input{
@@ -78,4 +94,12 @@ a:hover{
 
 label{
     color: white;
+}
+
+#error-message{
+    font-size: 10px;
+    text-align: center;
+
+
+    
 }
