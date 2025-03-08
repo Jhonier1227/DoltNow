@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoltNow - Gestor de Tareas</title>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../views/public/css/principal.css">
     
@@ -12,16 +12,15 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="public/img/doltnowLogo.png" alt="DoltNow Logo" height="50"> DoltNow
+                <img id="logoPri" src="public/img/doltnowLogo.png" alt="DoltNow Logo"> DoltNow
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="../views/registro.html">Registro</a></li>
                     <li class="nav-item"><a class="nav-link" href="../views/login.html">Login</a></li>
                 </ul>
             </div>
-            <button class="btn btn-outline-light" onclick="toggleDarkMode()">Modo Claro/Oscuro</button>
+            <button id="modo-btn" class="btn" class="btn btn-outline-light" onclick="toggleDarkMode()">🌙</button>
 
         </div>
        
@@ -60,7 +59,7 @@
     </div>
     
     <div class="text-center contact-buttons">
-        <a href="#" class="btn btn-dark">GitHub</a>
+        <a href="https://github.com/Jhonier1227" class="btn btn-dark">GitHub</a>
         <a href="#" class="btn btn-primary">LinkedIn</a>
         <a href="#" class="btn btn-success">portafolio</a>
         <a href="#" class="btn btn-warning">Teléfono</a>
@@ -78,5 +77,6 @@
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
      <script src="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"  ></script>
+     <script  src="/views/public/js/principal.js"></script>
 </body>
 </html>
