@@ -22,9 +22,9 @@ body{
     padding: 10px; /* Aumenta el espacio interno */
     border-radius: 15px; /* Bordes más redondeados */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    max-width: 400px; /* Aumenta el ancho */
+    max-width: 300px; /* Aumenta el ancho */
     min-height: 400px; /* Asegura una altura mínima */
-    max-height: 600px; /* Aumenta la altura máxima */
+    max-height: 300px; /* Aumenta la altura máxima */
     text-align: center;
     margin-top: 90px;
     backdrop-filter: blur(15px);
