@@ -1,6 +1,12 @@
-# 📝 DoltNow - Gestor de Tareas  
 
-**DoltNow** es una aplicación web para la gestión de tareas enfocada en la **acción y productividad**. Permite a los usuarios **crear, organizar y administrar sus tareas** de manera eficiente con una interfaz minimalista y moderna.
+# 📝 DoltNow - Gestor de Tareas Inteligente  
+
+**DoltNow** es una aplicación web diseñada para mejorar la **productividad y organización personal** mediante la gestión eficiente de tareas. Con una interfaz limpia y minimalista, permite a los usuarios **crear, editar, eliminar y clasificar tareas** en distintas categorías.  
+
+Su objetivo principal es **reducir la procrastinación** y ayudar a los usuarios a mantenerse enfocados en sus actividades diarias, brindando una experiencia fluida y sin distracciones.  
+
+En futuras versiones, **DoltNow** incluirá un **cuaderno virtual** para tomar notas junto con las tareas y una **API REST** para integración con aplicaciones móviles.
+
 
 ## 🚀 Características  
 ✅ Registro e inicio de sesión de usuarios.  
