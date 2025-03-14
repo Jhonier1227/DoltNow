@@ -4,44 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoltNow - Mis Tareas</title>
-    <link rel="stylesheet" href="../views/public/css/tar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../public/css/tar.css">
 </head>
 <body class="light-mode">
 
     <!-- Barra de navegación -->
-    <nav class="navbar px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
         <a class="navbar-brand" href="#">DoltNow</a>
-        <button id="modo-btn" class="btn">🌙</button>
+        <button id="modo-btn" class="btn btn-light">🌙 Modo oscuro</button>
     </nav>
 
     <!-- Contenedor principal -->
-    <div class="container mt-5 fade-in">
+    <div class="container mt-4">
         <h2 class="text-center">📌 Mis tareas</h2>
 
         <!-- Formulario de tareas -->
-        <div class="task-card p-4 shadow-sm fade-in">
+        <div class="card p-4 shadow-sm">
             <form id="formTarea">
-                <input type="text" id="titulo" class="form-control mb-2" placeholder="Nueva tarea" required>
-                <textarea id="descripcion" class="form-control mb-3" placeholder="Descripción" required></textarea>
-                <button type="submit" class="btn btn-add">Agregar tarea</button>
+                <input type="hidden" id="idTarea">
+                
+                <label for="titulo" class="form-label">Título de la tarea:</label>
+                <input type="text" id="titulo" class="form-control mb-2" placeholder="Escribe el título" required>
+
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <textarea id="descripcion" class="form-control mb-3" placeholder="Describe tu tarea" required></textarea>
+
+                <label for="categoria" class="form-label">Selecciona una categoría:</label>
+                <select id="categoria" class="form-select mb-3">
+                    <!-- Categorías cargadas dinámicamente -->
+                </select>
+
+                <button type="submit" class="btn btn-primary w-100">Agregar tarea</button>
+            </form>
+        </div>
+
+        <!-- Formulario para agregar categoría -->
+        <div class="card p-3 mt-3 shadow-sm">
+            <h5>📂 Agregar Categoría</h5>
+            <form id="formCategoria">
+                <input type="text" id="nombreCategoria" class="form-control mb-2" placeholder="Nombre de la categoría" required>
+                <button type="submit" class="btn btn-success w-100">Agregar Categoría</button>
             </form>
         </div>
 
         <br>
 
+        <!-- Lista de categorías -->
+        <h5 class="mt-4">📂 Categorías</h5>
+        <ul id="listaCategorias" class="list-group mb-3">
+            <!-- Aquí se agregarán dinámicamente las categorías -->
+        </ul>
+
         <!-- Lista de tareas -->
         <h3 class="mt-4">📋 Lista de tareas</h3>
-        <ul id="listaTareas" class="task-list">
+        <ul id="listaTareas" class="list-group">
             <!-- Aquí se agregarán dinámicamente las tareas -->
         </ul>
 
         <br>
-        <a href="../controllers/logout.php" class="btn btn-logout">Cerrar sesión</a>
+        
+        <!-- Cerrar sesión -->
+        <a href="../controllers/logout.php" class="btn btn-danger w-100">Cerrar sesión</a>
     </div>
 
-    <script src="../views/public/js/tarea.js"></script>
+    <script src="../public/js/tarea.js"></script>
+    <script src="../public/js/categoria.js"></script>
+
+    <script>
+        // Cambiar entre modo claro y oscuro
+        const botonModo = document.getElementById("modo-btn");
+        const body = document.body;
+
+        // Cargar modo guardado
+        if (localStorage.getItem("modo") === "oscuro") {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            botonModo.textContent = "☀️ Modo claro";
+        }
+
+        // Evento para cambiar de modo
+        botonModo.addEventListener("click", () => {
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                localStorage.setItem("modo", "oscuro");
+                botonModo.textContent = "☀️ Modo claro";
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                localStorage.setItem("modo", "claro");
+                botonModo.textContent = "🌙 Modo oscuro";
+            }
+        });
+    </script>
 
 </body>
 </html>

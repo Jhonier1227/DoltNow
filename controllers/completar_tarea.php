@@ -8,7 +8,7 @@ if (!isset($_SESSION["id_u"]) || !isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-$sql = "DELETE FROM tareas WHERE id = :id AND usuario_id = :usuario_id";
+$sql = "UPDATE tareas SET completado = NOT completado WHERE id = :id AND usuario_id = :usuario_id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(":id", $id);
 $stmt->bindParam(":usuario_id", $_SESSION["id_u"]);
